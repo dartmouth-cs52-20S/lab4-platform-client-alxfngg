@@ -10,7 +10,6 @@ class Posts extends Component {
   }
 
   postsList = () => {
-    console.log(this.props.posts);
     const posts = this.props.posts.map((post) => {
       return (
         <li key={post.id} className="postItem">

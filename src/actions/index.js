@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const ROOT_URL = 'https://platform.cs52.me/api';
-const API_KEY = '?key=a_feng';
+const ROOT_URL = 'https://la5-alexfeng.herokuapp.com/api';
+const API_KEY = '';
 
 // keys for actiontypes
 export const ActionTypes = {
@@ -10,6 +10,7 @@ export const ActionTypes = {
   UPDATE_POST: 'UPDATE_POST',
   CREATE_POST: 'CREATE_POST',
   DELETE_POST: 'DELETE_POST',
+  ERROR_SET: 'ERROR_SET',
 };
 
 export function fetchPosts() {
