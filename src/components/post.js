@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import SaveIcon from '@material-ui/icons/Save';
@@ -131,6 +132,7 @@ class Post extends Component {
   }
 
   render() {
+    console.log(this.props.currentPost.authorName);
     return (
       <div>
         <div id="post">
@@ -138,6 +140,9 @@ class Post extends Component {
           {this.renderTags()}
           {this.renderContent()}
           {this.renderCoverUrl()}
+          <Typography variant="caption" id="tags">
+            Posted by: {this.props.currentPost.authorName}
+          </Typography>
           <div id="buttons">
             <IconButton aria-label="delete" onClick={this.handleDelete}>
               <DeleteIcon />
@@ -158,4 +163,4 @@ function mapStateToProps(reduxState) {
 
 // enables this.props.currentPost
 // and this.props.fetchPost, this.props.deletePost, and this.props.updatePost
-export default connect(mapStateToProps, { fetchPost, deletePost, updatePost })(Post);
+export default connect(mapStateToProps, { fetchPost, deletePost, updatePost })(withRouter(Post));
