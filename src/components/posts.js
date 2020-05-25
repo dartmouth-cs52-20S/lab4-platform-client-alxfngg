@@ -13,7 +13,7 @@ class Posts extends Component {
     const posts = this.props.posts.map((post) => {
       return (
         <li key={post.id} className="postItem">
-          <NavLink to={`posts/${post.id}`} exact id="link">
+          <NavLink to={`posts/${post.id}`} id="link">
             {this.renderImage(post)}
             <Typography id="postTitle" variant="h4" component="h2">
               {post.title}

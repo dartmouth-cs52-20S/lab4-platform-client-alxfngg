@@ -132,7 +132,6 @@ class Post extends Component {
   }
 
   render() {
-    console.log(this.props.currentPost.authorName);
     return (
       <div>
         <div id="post">
