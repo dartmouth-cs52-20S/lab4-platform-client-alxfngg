@@ -43,7 +43,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.13",
     "@material-ui/icons": "^4.9.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "jquery": "^3.5.0",
     "lodash.debounce": "^4.0.8",
     "marked": "^1.0.0",
